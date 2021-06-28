@@ -45,17 +45,18 @@ exports.signIn = async (req, res) =>
 
 exports.signUp = async (req, res) =>
 {
-    const { email, password } = req.body;
+    let { email, password } = req.body;
 
-    try
+    try 
     {
-        const salt = bcrypt.genSalt();
+        const salt = await bcrypt.genSalt();
         password = await bcrypt.hash(password, salt);
-        const created_at = moment().format('MMMM Do YYYY, h:mm:ss a');
+        const createdAt = moment().format('MMMM Do YYYY, h:mm:ss a');
 
         const newUser = await User.create({
             email,
-            password
+            password,
+            createdAt
         });
 
         const token = createWebToken(newUser._id);
@@ -64,6 +65,7 @@ exports.signUp = async (req, res) =>
     }
     catch (err)
     {
+        console.log(err)
         if (err.code === 11000)
         {
             return res.status(500).json({ error: 'Email already registered' });
