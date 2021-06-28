@@ -1,8 +1,6 @@
 const mongoose = require("mongoose");
 const URI = process.env.URI;
 
-console.log(URI)
-
 mongoose.connect(URI, {
     authSource: 'admin',
     useNewUrlParser: true,
