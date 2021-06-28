@@ -26,4 +26,5 @@ Download the zip of the repo or fork and clone the repo. After cloning it into y
   npm start
   ```
 - Expected Output in terminal
-<img src="assets/test.png" width=50% />&ensp;&ensp;&ensp;
+&ensp;&ensp;&ensp;
+<img src="assets/test.png" width=50% />
