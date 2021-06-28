@@ -5,7 +5,7 @@ This is a nodejs starter kit. Authentication is already done with hashed passwor
 
 ### How to use this starter kit?
 
-Download the zip of the repo or fork and clone the repo. After cloning it into you system go inside the starter kit folder you can rename the foldername.
+Click on Use this template on right above side and name the repo you want. A new repo of yours will be created. Now, clone this repo in your system. After cloning it into you system go inside the project folder<your-repo-name>.
 
 - After moving into the folder run the following command to install all the dependencied
   ```
